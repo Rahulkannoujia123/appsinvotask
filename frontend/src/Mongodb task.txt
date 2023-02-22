@@ -1,0 +1,34 @@
+{
+
+    "transaction_id": "1234",
+    "account_id": "5678",
+    "amount": 4500,
+    "timestamp": ISODate("2023-02-22T13:05:00.000Z")
+}
+
+
+
+
+
+mongoquery
+db.transactions.distinct("account_id", { "amount": { "$lt": 5000 } })
+
+This will return a list of distinct account IDs that have at least one transaction with an amount less than 5000.
+ The $lt operator is used to filter for transactions with an amount less than 5000.
+  The distinct function is used to return a list of unique account IDs that satisfy this condition.
+
+
+
+  { "_id" : ObjectId("61b9f9b853da1d47a53bc7d4"), "name" : "iPhone 13" }
+{ "_id" : ObjectId("61b9f9d953da1d47a53bc7d5"), "name" : "Samsung Galaxy S21" }
+{ "_id" : ObjectId("61b9fa0153da1d47a53bc7d6"), "name" : "iPad Pro" }
+{ "_id" : ObjectId("61b9fa1253da1d47a53bc7d7"), "name" : "MacBook Pro" }
+{ "_id" : ObjectId("61b9fa2053da1d47a53bc7d8"), "name" : "Samsung Galaxy A52" }
+{ "_id" : ObjectId("61b9fa2f53da1d47a53bc7d9"), "name" : "Apple Watch Series 7" }
+
+
+//mongoquery
+db.products.distinct("products_name")
+
+
+output:["iPhone,"Samsung Galaxy S21,........]

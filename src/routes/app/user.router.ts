@@ -1,4 +1,5 @@
 import { Router } from "express";
+import CustomerController from "../../controllers/app/customer.controller";
 import UserController from "../../controllers/app/user.controller";
 import Authentication from "../../middlewares/authentication.middleware"
 
@@ -37,6 +38,14 @@ class UserRouter {
            '/distance',
            Authentication.user,
            UserController.getDistance 
+        )
+        this.router.get(
+            '/get-customer',
+            CustomerController.customer
+        )
+        this.router.get(
+            '/get-transaction',
+            CustomerController.transaction
         )
     }
 }

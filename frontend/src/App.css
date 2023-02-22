@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 1rem;
+  background: #000;
+}
+.appname {
+  text-decoration: none;
+  color: #fff;
+}
+main {
+  padding: 2rem;
+}
+table td,
+table th {
+  padding: 10px;
+  border: 1px solid #888;
+}
+table {
+  border-collapse: collapse;
+  margin: 2rem;
+}
+.accounts {
+  list-style: none;
+}
+.acc_td {
+  padding: 0;
+}
+.accounts li {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-bottom: 1px solid #888;
+}
+.accounts li.active {
+  background: yellow;
+}
+ul li ul {
+  display: none;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid green;
+  flex-direction: column;
+}
+ul li.active ul {
+  display: flex;
+}
